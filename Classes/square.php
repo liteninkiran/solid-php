@@ -1,6 +1,6 @@
 <?php
 
-class Square
+class Square implements ShapeInterface
 {
     public $length;
 
@@ -8,7 +8,11 @@ class Square
     {
         $this->length = $length;
     }
-}
 
+    public function area()
+    {
+        return pow($this->length, 2);
+    }
+}
 
 ?>

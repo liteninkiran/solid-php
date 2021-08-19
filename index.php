@@ -56,10 +56,9 @@
 
             <hr>
 
-            <h2>Single-Responsibility Principle</h2>
-
             <div class="inner-container">
 <?php
+                include('Classes\shape_interface.php');
                 include('Classes\square.php');
                 include('Classes\circle.php');
                 include('Classes\area_calculator.php');
@@ -81,6 +80,13 @@
                 <p><?= $output->HTML(); ?></p>
 
             </div>
+
+
+
+            <hr>
+
+            <h2>Single-Responsibility Principle</h2>
+            <h2>Open-Closed Principle</h2>
 
         </div>
 
