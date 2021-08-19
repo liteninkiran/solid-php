@@ -62,6 +62,7 @@
                 include('Classes\square.php');
                 include('Classes\circle.php');
                 include('Classes\area_calculator.php');
+                include('Classes\volume_calculator.php');
                 include('Classes\calculator_output.php');
 
                 $shapes = [
@@ -81,12 +82,25 @@
 
             </div>
 
-
-
             <hr>
 
             <h2>Single-Responsibility Principle</h2>
             <h2>Open-Closed Principle</h2>
+            <h2>Liskov Substitution Principle</h2>
+
+            <div class="inner-container">
+<?php
+                $volumes = new VolumeCalculator($shapes);
+                $output2 = new SumCalculatorOutputter($volumes);
+?>
+
+                <h4>JSON Output:</h4>
+                <p><?= $output2->JSON(); ?></p>
+
+                <h4>HTML Output:</h4>
+                <p><?= $output2->HTML(); ?></p>
+
+            </div>
 
         </div>
 
